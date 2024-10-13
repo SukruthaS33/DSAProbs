@@ -1,0 +1,69 @@
+package com.sukrutha.gpt.questions;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class GptAsks {
+
+	static Map<String, Integer> countVowelAndConsonantInName(String name) {
+		String str = "aeiouAEIOU";
+		int consCount = 0;
+		int vowCount = 0;
+
+		for (int i = 0; i < name.length(); i++) {
+			if ((str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') || (str.charAt(i) >= 'a' && str.charAt(i) <= 'z')) {
+
+				if (str.contains(String.valueOf(name.charAt(i)))) {
+					System.out.println(str.charAt(i));
+					vowCount++;
+				}
+
+				else {
+					consCount++;
+				}
+			}
+		}
+		Map<String, Integer> map = new HashMap<>();
+		map.put("vow", vowCount++);
+		map.put("cons", consCount);
+		return map;
+
+	}
+
+	public static void main(String[] args) {
+
+// countVowelAndConsonant in given name
+		String name = "Sukrutha";
+		System.out.println(countVowelAndConsonantInName(name));
+// find the missing number in 0 to n
+		int[] array = { 0, 4, 3, 2 };
+		int n = array.length;
+		// sum of first n natural numbers
+		int expectedSum = n * (n + 1) / 2;
+		int arraySum = 0;
+		for (int num : array) {
+			arraySum = arraySum + num;
+
+		}
+		int missingNum = expectedSum - arraySum;
+		System.out.println(missingNum);
+//Remove duplicates
+
+		long a = 12343;
+		int sum = 0;
+		for (int i = 0; i < String.valueOf(a).length(); i++) {
+			sum = sum + Integer.parseInt(String.valueOf(a).charAt(i) + "");
+
+		}
+		System.out.println(a);
+		System.out.println(sum);
+
+	}
+
+}
