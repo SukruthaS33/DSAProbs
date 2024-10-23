@@ -1,0 +1,29 @@
+package com.sukrutha.gpt.questions;
+
+import java.util.Set;
+import java.util.LinkedHashSet;
+
+public class RemoveDups {
+
+	static int array[] = { 1, 2, 5, 5, 2, 3 };
+
+	public static void main(String[] args) {
+
+		removeDups();
+
+	}
+
+	static void removeDups() {
+
+		Set<Integer> set = new LinkedHashSet<Integer>();
+		for (int element : array) {
+			if (!set.contains(element)) {
+				set.add(element);
+			}
+
+		}
+		System.out.println(set);
+		
+	}
+
+}
