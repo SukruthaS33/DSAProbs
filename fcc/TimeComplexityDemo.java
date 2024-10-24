@@ -8,9 +8,9 @@ public class TimeComplexityDemo {
 		double now = System.nanoTime();
 
 		demo1.findSum(1000);
-		System.out.println(System.nanoTime() - now +"ms");
+		System.out.println(System.nanoTime() - now +"ns");
 		demo1.findSum2(4);
-		System.out.println(System.nanoTime() - now+"ms");
+		System.out.println(System.nanoTime() - now+"ns");
 
 	}
 
