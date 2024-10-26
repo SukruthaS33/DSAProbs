@@ -9,7 +9,7 @@ public void findMaxMin(int[] array) {
 			if (el > max) {
 				max = el;
 			}
-			if (el < min) {
+			else if (el < min) {//an element that is greater than max cannot be less than min hence we can use else if instead of simple if
 				min = el;
 			}
 		}
